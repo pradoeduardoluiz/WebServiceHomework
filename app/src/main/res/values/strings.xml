@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WebServiceHomework</string>
+
+    <string name="action_go_json_list">Json List</string>
+    <string name="action_go_xml_list">XML List</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
