@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.pos.pucpr.webservicehomework.HomeFragment"
-        android:label="fragment_home"
+        android:name="com.pos.pucpr.webservicehomework.ui.fragments.HomeFragment"
+        android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_jsonListFragment"
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/jsonListFragment"
-        android:name="com.pos.pucpr.webservicehomework.JsonListFragment"
-        android:label="fragment_json_list"
+        android:name="com.pos.pucpr.webservicehomework.ui.fragments.JsonListFragment"
+        android:label="@string/title_json_list"
         tools:layout="@layout/fragment_json_list" />
     <fragment
         android:id="@+id/xmlListFragment"
-        android:name="com.pos.pucpr.webservicehomework.XmlListFragment"
-        android:label="fragment_xml_list"
+        android:name="com.pos.pucpr.webservicehomework.ui.fragments.XmlListFragment"
+        android:label="@string/title_xml_list"
         tools:layout="@layout/fragment_xml_list" />
 </navigation>

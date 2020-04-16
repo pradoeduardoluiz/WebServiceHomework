@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".ui.fragments.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,19 +19,23 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_json_list"
+            style="@style/App.Components.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/action_go_json_list"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
             android:textColor="@android:color/white" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_xml_list"
+            style="@style/App.Components.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorAccent"
             android:text="@string/action_go_xml_list"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
             android:textColor="@android:color/white" />
 
     </LinearLayout>

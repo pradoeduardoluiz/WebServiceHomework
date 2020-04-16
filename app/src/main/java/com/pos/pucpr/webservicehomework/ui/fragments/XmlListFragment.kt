@@ -1,4 +1,4 @@
-package com.pos.pucpr.webservicehomework
+package com.pos.pucpr.webservicehomework.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
