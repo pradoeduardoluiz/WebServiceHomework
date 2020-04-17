@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_json_list" />
     <fragment
         android:id="@+id/xmlListFragment"
-        android:name="com.pos.pucpr.webservicehomework.ui.fragments.XmlListFragment"
+        android:name="com.pos.pucpr.webservicehomework.ui.fragments.XmlFormFragment"
         android:label="@string/title_xml_list"
         tools:layout="@layout/fragment_xml_list" />
 </navigation>

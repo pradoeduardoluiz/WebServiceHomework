@@ -6,8 +6,10 @@ import com.pos.pucpr.webservicehomework.remote.utils.isNetworkAvailable
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.converter.simplexml.SimpleXmlConverterFactory
 import java.io.IOException
 
 object NetworkFactory {
@@ -25,11 +27,12 @@ object NetworkFactory {
 
     fun createRetrofit(
         url: String,
-        context: Context
+        context: Context,
+        factory: Converter.Factory
     ): Retrofit = Retrofit.Builder()
         .baseUrl(url)
         .client(createOkHttpClient(context))
-        .addConverterFactory(MoshiConverterFactory.create())
+        .addConverterFactory(factory)
         .build()
 
     private fun createConnectivityAwareInterceptor(context: Context): Interceptor {

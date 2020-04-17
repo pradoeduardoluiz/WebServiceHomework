@@ -58,6 +58,7 @@ dependencies {
     def lifecycle_ext_version = "2.2.0"
     def view_model_version = "2.2.0"
     def paging_version = "2.1.2"
+    def mask_version = "6.0.0"
 
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
 
@@ -88,6 +89,7 @@ dependencies {
     implementation "com.squareup.moshi:moshi-adapters:$moshi_adapter_version"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-simplexml:$retrofit_version"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$logging_interceptor_version"
 
@@ -95,6 +97,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$view_model_version"
 
     implementation "androidx.paging:paging-runtime:$paging_version"
+
+    implementation "com.redmadrobot:input-mask-android:$mask_version"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

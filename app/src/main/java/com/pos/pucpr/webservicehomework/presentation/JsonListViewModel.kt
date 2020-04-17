@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pos.pucpr.webservicehomework.common.Resource
 import com.pos.pucpr.webservicehomework.domain.GetCharacters
-import com.pos.pucpr.webservicehomework.models.Character
+import com.pos.pucpr.webservicehomework.models.json.Character
 import kotlinx.coroutines.launch
 
 class JsonListViewModel(private val getCharacters: GetCharacters) : ViewModel() {

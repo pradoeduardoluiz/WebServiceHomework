@@ -10,4 +10,13 @@
     <string name="title_json_list">Json List</string>
     <string name="title_xml_list">Xml List</string>
 
+    <string name="hint_cep">Digite seu CEP</string>
+    <string name="hint_street">Logradouro</string>
+    <string name="hint_district">Bairro</string>
+    <string name="hint_city">Cidade</string>
+    <string name="hint_uf">UF</string>
+
+
+    <string name="header_address">Endereço</string>
+
 </resources>

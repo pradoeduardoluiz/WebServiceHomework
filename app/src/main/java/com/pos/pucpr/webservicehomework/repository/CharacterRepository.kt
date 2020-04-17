@@ -1,6 +1,6 @@
 package com.pos.pucpr.webservicehomework.repository
 
-import com.pos.pucpr.webservicehomework.models.CharacterResponse
+import com.pos.pucpr.webservicehomework.models.json.CharacterResponse
 
 interface CharacterRepository {
 

@@ -1,6 +1,6 @@
 package com.pos.pucpr.webservicehomework.remote.repositories
 
-import com.pos.pucpr.webservicehomework.models.CharacterResponse
+import com.pos.pucpr.webservicehomework.models.json.CharacterResponse
 import com.pos.pucpr.webservicehomework.remote.CharacterService
 import com.pos.pucpr.webservicehomework.remote.mappers.toModel
 import com.pos.pucpr.webservicehomework.repository.CharacterRepository

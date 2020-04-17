@@ -1,7 +1,7 @@
 package com.pos.pucpr.webservicehomework.ui.controller
 
 import com.airbnb.epoxy.TypedEpoxyController
-import com.pos.pucpr.webservicehomework.models.Character
+import com.pos.pucpr.webservicehomework.models.json.Character
 import com.pos.pucpr.webservicehomework.ui.holders.characterViewHolder
 
 class CharacterListController : TypedEpoxyController<List<Character>>() {

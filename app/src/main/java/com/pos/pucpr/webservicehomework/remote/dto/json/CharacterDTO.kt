@@ -1,4 +1,4 @@
-package com.pos.pucpr.webservicehomework.remote.dto
+package com.pos.pucpr.webservicehomework.remote.dto.json
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

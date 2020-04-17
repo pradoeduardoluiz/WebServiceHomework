@@ -1,6 +1,6 @@
 package com.pos.pucpr.webservicehomework.remote
 
-import com.pos.pucpr.webservicehomework.remote.dto.CharacterResponseDTO
+import com.pos.pucpr.webservicehomework.remote.dto.json.CharacterResponseDTO
 import retrofit2.http.GET
 import retrofit2.http.Query
 
