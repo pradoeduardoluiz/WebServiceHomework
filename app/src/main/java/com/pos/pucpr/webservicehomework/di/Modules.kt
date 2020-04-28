@@ -1,8 +1,7 @@
 package com.pos.pucpr.webservicehomework.di
 
 import android.content.Context
-import com.pos.pucpr.webservicehomework.domain.GetAddress
-import com.pos.pucpr.webservicehomework.domain.GetCharacters
+import com.pos.pucpr.webservicehomework.domain.*
 import com.pos.pucpr.webservicehomework.presentation.JsonListViewModel
 import com.pos.pucpr.webservicehomework.presentation.XmlFormViewModel
 import com.pos.pucpr.webservicehomework.remote.CharacterService
@@ -11,8 +10,10 @@ import com.pos.pucpr.webservicehomework.remote.NetworkFactory
 import com.pos.pucpr.webservicehomework.remote.ViaCepService
 import com.pos.pucpr.webservicehomework.remote.repositories.CepRepositoryImpl
 import com.pos.pucpr.webservicehomework.remote.repositories.CharacterRepositoryImpl
+import com.pos.pucpr.webservicehomework.remote.repositories.Exercise2RepositoryImpl
 import com.pos.pucpr.webservicehomework.repository.CepRepository
 import com.pos.pucpr.webservicehomework.repository.CharacterRepository
+import com.pos.pucpr.webservicehomework.repository.Exercise2Repository
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -29,11 +30,15 @@ val createUiModule: Module = module {
 val createDomainModule: Module = module {
     single { GetCharacters(get()) }
     single { GetAddress(get()) }
+    single { DateDiffUseCase(get()) }
+    single { NumberSequenceUseCase(get()) }
+    single { MimicUseCase(get()) }
 }
 
 val createRepositoryModule: Module = module {
     factory<CharacterRepository> { CharacterRepositoryImpl(get()) }
     factory<CepRepository> { CepRepositoryImpl(get()) }
+    factory<Exercise2Repository> { Exercise2RepositoryImpl(get()) }
 }
 
 val createRemoteModule: Module = module {
@@ -49,6 +54,13 @@ val createRemoteModule: Module = module {
             NetworkConstants.XML_BASE_URL,
             get(),
             SimpleXmlConverterFactory.create()
+        ).create(ViaCepService::class.java)
+    }
+    single {
+        createRetrofit(
+            NetworkConstants.EXERCISE_2_BASE_URL,
+            get(),
+            MoshiConverterFactory.create()
         ).create(ViaCepService::class.java)
     }
 }
