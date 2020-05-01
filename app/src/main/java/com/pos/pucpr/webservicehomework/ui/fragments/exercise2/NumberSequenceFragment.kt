@@ -11,21 +11,21 @@ import com.pos.pucpr.webservicehomework.common.Resource
 import com.pos.pucpr.webservicehomework.common.exhaustive
 import com.pos.pucpr.webservicehomework.common.ext.hideMainProgressBar
 import com.pos.pucpr.webservicehomework.common.ext.showMainProgressBar
-import com.pos.pucpr.webservicehomework.databinding.FragmentDateDiffBinding
-import com.pos.pucpr.webservicehomework.presentation.exercise2.DateDiffViewModel
+import com.pos.pucpr.webservicehomework.databinding.FragmentNumberSequenceBinding
+import com.pos.pucpr.webservicehomework.presentation.exercise2.NumberSequenceViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class DateDiffFragment : Fragment() {
+class NumberSequenceFragment : Fragment() {
 
-    private lateinit var binding: FragmentDateDiffBinding
+    private lateinit var binding: FragmentNumberSequenceBinding
 
-    private val viewModel: DateDiffViewModel by viewModel()
+    private val viewModel: NumberSequenceViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentDateDiffBinding.inflate(inflater, container, false)
+        binding = FragmentNumberSequenceBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -33,16 +33,15 @@ class DateDiffFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         subscribeObservers()
 
-        binding.buttonCalcDiff.setOnClickListener {
-            viewModel.submitDateDiff(
-                dateStart = binding.textInitialDate.text.toString(),
-                dateFinish = binding.textFinishDate.text.toString()
+        binding.buttonOrderingSequence.setOnClickListener {
+            viewModel.submitNumberSequence(
+                sequence = binding.textNumberSequence.text.toString()
             )
         }
     }
 
     private fun subscribeObservers() {
-        viewModel.submitDateDiffState.run {
+        viewModel.submitNumberSequenceState.run {
             removeObservers(viewLifecycleOwner)
             observe(viewLifecycleOwner, Observer {
                 when (it) {
@@ -58,15 +57,15 @@ class DateDiffFragment : Fragment() {
     }
 
     private fun updateView() {
-        viewModel.dateDiffResponse.let {
-            binding.textDifferenceInDays.text =
-                getString(R.string.label_difference_in_days, it.differenceInDays.toString())
+        viewModel.numberSequenceResponse.let {
+            binding.textAscendingOrder.text =
+                getString(R.string.label_ascending_order, it.ascendingOrder.toString())
 
-            binding.textDifferenceInWeeks.text =
-                getString(R.string.label_difference_in_weeks, it.differenceInWeeks.toString())
+            binding.textDescendingOrder.text =
+                getString(R.string.label_descending_order, it.descendingOrder.toString())
 
-            binding.textDifferenceInMonths.text =
-                getString(R.string.label_difference_in_months, it.differenceInMonths.toString())
+            binding.textPairNumber.text =
+                getString(R.string.label_pair_numbers, it.pairNumbers.toString())
         }
     }
 }

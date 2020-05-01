@@ -1,4 +1,4 @@
-package com.pos.pucpr.webservicehomework.presentation
+package com.pos.pucpr.webservicehomework.presentation.exercise2
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

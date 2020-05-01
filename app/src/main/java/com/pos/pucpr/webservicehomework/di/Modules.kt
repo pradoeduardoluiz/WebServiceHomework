@@ -2,9 +2,10 @@ package com.pos.pucpr.webservicehomework.di
 
 import android.content.Context
 import com.pos.pucpr.webservicehomework.domain.*
-import com.pos.pucpr.webservicehomework.presentation.DateDiffViewModel
 import com.pos.pucpr.webservicehomework.presentation.JsonListViewModel
 import com.pos.pucpr.webservicehomework.presentation.XmlFormViewModel
+import com.pos.pucpr.webservicehomework.presentation.exercise2.DateDiffViewModel
+import com.pos.pucpr.webservicehomework.presentation.exercise2.NumberSequenceViewModel
 import com.pos.pucpr.webservicehomework.remote.*
 import com.pos.pucpr.webservicehomework.remote.repositories.CepRepositoryImpl
 import com.pos.pucpr.webservicehomework.remote.repositories.CharacterRepositoryImpl
@@ -24,6 +25,7 @@ val createUiModule: Module = module {
     viewModel { JsonListViewModel(get()) }
     viewModel { XmlFormViewModel(get()) }
     viewModel { DateDiffViewModel(get()) }
+    viewModel {NumberSequenceViewModel(get()) }
 }
 
 val createDomainModule: Module = module {

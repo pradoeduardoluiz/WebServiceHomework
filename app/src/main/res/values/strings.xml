@@ -37,4 +37,13 @@
     <string name="label_difference_in_weeks">Diferença em Semanas: %s</string>
     <string name="label_difference_in_months">Diferença em Meses: %s</string>
 
+    <string name="label_ascending_order_default">Ordem crescente: -</string>
+    <string name="label_descending_order_default">Ordem descendente: -</string>
+    <string name="label_pair_numbers_default">Números pares: -</string>
+
+    <string name="label_ascending_order">Ordem crescente: %s</string>
+    <string name="label_descending_order">Ordem descendente: %s</string>
+    <string name="label_pair_numbers">Números pares: %s</string>
+
+
 </resources>
