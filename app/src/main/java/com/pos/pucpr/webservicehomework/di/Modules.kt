@@ -2,12 +2,10 @@ package com.pos.pucpr.webservicehomework.di
 
 import android.content.Context
 import com.pos.pucpr.webservicehomework.domain.*
+import com.pos.pucpr.webservicehomework.presentation.DateDiffViewModel
 import com.pos.pucpr.webservicehomework.presentation.JsonListViewModel
 import com.pos.pucpr.webservicehomework.presentation.XmlFormViewModel
-import com.pos.pucpr.webservicehomework.remote.CharacterService
-import com.pos.pucpr.webservicehomework.remote.NetworkConstants
-import com.pos.pucpr.webservicehomework.remote.NetworkFactory
-import com.pos.pucpr.webservicehomework.remote.ViaCepService
+import com.pos.pucpr.webservicehomework.remote.*
 import com.pos.pucpr.webservicehomework.remote.repositories.CepRepositoryImpl
 import com.pos.pucpr.webservicehomework.remote.repositories.CharacterRepositoryImpl
 import com.pos.pucpr.webservicehomework.remote.repositories.Exercise2RepositoryImpl
@@ -25,6 +23,7 @@ import retrofit2.converter.simplexml.SimpleXmlConverterFactory
 val createUiModule: Module = module {
     viewModel { JsonListViewModel(get()) }
     viewModel { XmlFormViewModel(get()) }
+    viewModel { DateDiffViewModel(get()) }
 }
 
 val createDomainModule: Module = module {
@@ -61,7 +60,7 @@ val createRemoteModule: Module = module {
             NetworkConstants.EXERCISE_2_BASE_URL,
             get(),
             MoshiConverterFactory.create()
-        ).create(ViaCepService::class.java)
+        ).create(Exercise2Service::class.java)
     }
 }
 

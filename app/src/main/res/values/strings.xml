@@ -16,7 +16,25 @@
     <string name="hint_city">Cidade</string>
     <string name="hint_uf">UF</string>
 
-
     <string name="header_address">Endereço</string>
+    <string name="hint_initial_date">Date Inicial</string>
+    <string name="hint_finish_date">Date Final</string>
+    <string name="header_diff_date">Diferença entre datas</string>
+    <string name="action_diff_date">Calcular Diferença entre Datas</string>
+    <string name="hint_number_sequence">Sequencia númerica</string>
+    <string name="header_number_sequence">Sequencia Númerica</string>
+    <string name="header_mimic">Mimificador</string>
+    <string name="hint_phase">Frase</string>
+    <string name="action_order">Ordenar sequencia</string>
+    <string name="header_result">Resultado</string>
+
+
+    <string name="label_difference_in_days_default">Diferença em dias: -</string>
+    <string name="label_difference_in_weeks_default">Diferença em Semanas: -</string>
+    <string name="label_difference_in_months_default">Diferença em Meses: -</string>
+
+    <string name="label_difference_in_days">Diferença em dias: %s</string>
+    <string name="label_difference_in_weeks">Diferença em Semanas: %s</string>
+    <string name="label_difference_in_months">Diferença em Meses: %s</string>
 
 </resources>

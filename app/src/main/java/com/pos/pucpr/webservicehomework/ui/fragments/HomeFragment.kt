@@ -31,5 +31,9 @@ class HomeFragment : Fragment() {
         binding.buttonXmlList.setOnClickListener {
             findNavController().navigate(R.id.xmlListFragment)
         }
+
+        binding.buttonCalcDiff.setOnClickListener {
+            findNavController().navigate(R.id.dateDiffFragment)
+        }
     }
 }

@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_xmlListFragment"
             app:destination="@id/xmlListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dateDiffFragment"
+            app:destination="@id/dateDiffFragment" />
     </fragment>
     <fragment
         android:id="@+id/jsonListFragment"
@@ -27,4 +30,9 @@
         android:name="com.pos.pucpr.webservicehomework.ui.fragments.XmlFormFragment"
         android:label="@string/title_xml_list"
         tools:layout="@layout/fragment_xml_list" />
+    <fragment
+        android:id="@+id/dateDiffFragment"
+        android:name="com.pos.pucpr.webservicehomework.ui.fragments.exercise2.DateDiffFragment"
+        android:label="fragment_date_diff"
+        tools:layout="@layout/fragment_date_diff" />
 </navigation>
